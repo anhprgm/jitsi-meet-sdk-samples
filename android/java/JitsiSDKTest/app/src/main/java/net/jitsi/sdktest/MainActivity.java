@@ -70,7 +70,8 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonClick(View v) {
         EditText editText = findViewById(R.id.conferenceName);
         String text = editText.getText().toString();
-
+        EditText nameUser = findViewById(R.id.userName);
+        String textName = nameUser.getText().toString();
         if (text.length() > 0) {
             // Build options object for joining the conference. The SDK will merge the default
             // one we set earlier and this one when joining.
@@ -115,6 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case PARTICIPANT_JOINED:
                     Timber.i("Participant joined%s", event.getData().get("name"));
+                    break;
+                case PARTICIPANT_LEFT:
+                    Timber.i("hi%s", event.getData().get("data"));
                     break;
             }
         }

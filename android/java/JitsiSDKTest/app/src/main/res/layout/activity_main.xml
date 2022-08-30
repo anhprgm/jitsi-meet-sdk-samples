@@ -22,6 +22,18 @@
         app:layout_constraintTop_toBottomOf="@+id/conferenceName" />
 
     <EditText
+        android:id="@+id/userName"
+        android:layout_width="285dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/conferenceName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Name"
+        app:layout_constraintVertical_bias="0.962" />
+
+    <EditText
         android:id="@+id/conferenceName"
         android:layout_width="285dp"
         android:layout_height="wrap_content"
